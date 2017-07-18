@@ -10,10 +10,9 @@
 .DS_Store
 npm-debug.log*
 
-/database
 
 /.vscode
 
 /logs
-/rewriter
+
 .idea
