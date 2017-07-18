@@ -28,9 +28,7 @@ class IndexPage extends Component {
           <Button className={styles.menu_button} id="demonstration">使用演示</Button>
 
         </div>
-        <div className={styles.infoText}> {'说明文档（有建议请写到这）->'}
-          <a href="http://wiki.n.miui.com/pages/viewpage.action?pageId=50136631" target="view_window">http://wiki.n.miui.com/pages/viewpage.action?pageId=50136631</a>
-        </div>
+
         {children}
       </div>
     );

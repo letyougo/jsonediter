@@ -20,6 +20,7 @@
     "json-server": "^0.10.1",
     "jsonfile": "^3.0.0",
     "react": "^15.4.0",
+    "react-ace": "^5.1.0",
     "react-dom": "^15.4.0",
     "react-json-tree": "^0.10.9",
     "react-json-viewer": "^1.6.1"
