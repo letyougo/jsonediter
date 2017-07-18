@@ -1,0 +1,77 @@
+
+.normal {
+  font-family: Georgia, sans-serif;
+  text-align: center;
+  display: flex;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: normal;
+  letter-spacing: -1px;
+}
+
+.welcome {
+  height: 328px;
+  background-size: 388px 328px;
+}
+
+.list {
+  font-size: 1.2em;
+  margin-top: 1.8em;
+  list-style: none;
+  line-height: 1.5em;
+}
+
+.list code {
+  background: #f7f7f7;
+}
+
+/**/
+.index_new_textarea{
+  margin-top:5px;
+}
+.indexmenu{
+  height: 100%;
+  width: 200px;
+  margin-right: 10px;
+}
+.container{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
+}
+.collapse_container{
+  flex: 1;
+  width:100%;
+}
+.TableBox{
+  width: 100%
+}
+.newtable{
+  display: flex;
+  width: 100%;
+  margin:20px 0 5px 0 ;
+}
+.rightSideBox{
+  padding: 15px 0 0 5px;
+}
+.projectInput{
+  width: 200px;
+  margin-right: 10px;
+  background: #f4f4f4;
+  padding: 10px;
+}
+.projectInput_button{
+  margin: 5px 0 10px 0;
+}
+.projectBox{
+  background: #d6d6d6;
+  padding: 10px;
+}
+.jsonViewBox{
+  flex:1;
+  width: 100%;
+}
+

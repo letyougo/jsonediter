@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dva Demo</title>
+  <link rel="stylesheet" href="./index.css" />
+  <link href="./introjs.min.css" rel="stylesheet">
+  <script type="text/javascript" src="./intro.min.js"></script>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="./index.js"></script>
+
+<script>
+  function startIntro(){
+
+    var intro = introJs();
+      if(/(rewirite-url)/.test(document.location.hash)){
+        intro.setOptions({
+          steps: [
+              {
+              element: '#add_button',
+              intro: '点击即可添加更多的自定义路由',
+              position: 'right'
+            },{
+              element: document.querySelectorAll('.ant-table-row')[0],
+              intro: '可以把虚拟数据的链接从<br/>http://10.38.163.96:9091/db/db <br/>改成<br/> http://10.38.163.96:9091/aaaa/dddd/vvvv <br/> <br/>点击编辑，回车确认修改。',
+              position: 'bottom'
+            },
+            {
+              element: '#change_button',
+              intro: '修改完成以后要点击保存修改自定义路由才会生效！<br/>修改完成以后要点击保存修改自定义路由才会生效！<br/>修改完成以后要点击保存修改自定义路由才会生效！<br/>',
+              position: 'right'
+            }
+          ]
+        });
+      }else{
+        intro.setOptions({
+          steps: [
+            {
+              element: '#projectInput',
+              intro: '在这输入项目名，并创建项目。',
+              position: 'right'
+            },
+            {
+              element: document.querySelector('#projectNewTable'),
+              intro: '在这创建数据表。数据表将是您使用模拟接口的主要层级。',
+              position: 'bottom'
+            },
+            {
+              element: document.querySelectorAll('.projectTable')[0],
+              intro: '在这可以修改数据表中的内容，添加或者修改之后点击保存数据才生效',
+              position: 'bottom'
+            },
+            {
+              element: document.querySelectorAll('.projectAlert')[0],
+              intro: '您可以从这个地址获取数据，您可以对数据进行过滤，分页等操作。',
+              position: 'bottom'
+            }
+          ]
+        });
+      }
+      intro.start();
+  }
+  if (typeof(Storage) !== "undefined") {
+    if(!localStorage.getItem("used")){
+      startIntro()
+      localStorage.setItem("used", "used");
+    }
+} else {
+    alert('抱歉！您的浏览器不支持 Web Storage ...')
+}
+
+    document.getElementById('demonstration').addEventListener("click", (event)=>{
+      startIntro()
+    }, false)
+</script>
+
+</body>
+</html>
